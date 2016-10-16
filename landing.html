@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Practice 2</title>
+		<link href = "pinterest.css" rel = "stylesheet"/>
+		<script src="jquery-1.11.3.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			$("body").animate({
+				backgroundPositionX: "-=1900px" }, 40000, "linear");
+			
+			var audio = $("#hneh")[0];
+			var clicks = 0;
+			var time = 28;
+			$("#or").click(function() {
+				if(clicks == 0) {
+					audio.currentTime = time;
+					audio.play();
+					clicks = 1;
+					$("#he-man").fadeIn("1000");
+				}
+				else {
+					audio.pause();
+					time = audio.currentTime;
+					clicks = 0;
+					$("#he-man").fadeOut("1000");
+				}
+			});
+			
+		});
+
+		
+		</script>
+	</head>
+	
+	<body>
+		<audio id = "hneh">
+			<source src = "hey.mp3" type = "audio/mp3"></source>
+		</audio>
+		
+		<section id = "position-box">
+			<div id = "cover-box">
+				<div id = "he-man"></div>
+			</div>
+			<div id = "center-box">
+				<div id = "logo"></div>
+				
+				<a id  = "login-btn" href = "">Log In</a>
+				<div id = "title-box">He used Pinterest to design floors</div>
+				<div id = "subtitle-box">Join Pinterest to find all the things that inspire you.</div>
+				<a id = "facebook-icon" href = ""></a>
+				<div id = "behindbox-fb"></div>
+				<a id = "facebook-box" href = "">Continue with Facebook</a>
+				<div id = "sep1"></div>
+				<a id = "or">or</a>
+				<div id = "sep2"></div>
+				
+				<div id = "form1" class = "forms">Email</div>
+				<div id = "form2" class = "forms">Create a password</div>
+				<a id = "signup" class = "forms" href = "">Sign Up</a>
+				<div id = "policy">Creating an account means that you're okay with Pinterest's Terms of Service and Privacy Policy.</div>
+			
+			
+				<div id = "lower-box">
+					<div id = "part1" class = "bignumber">50+</div>
+					<div id = "part2" class = "smallletters">billion Pins to explore</div>
+					<div id = "divider1"></div>
+					<div id = "part3" class = "bignumber">15</div>
+					<div id = "part4" class = "smallletters">seconds to sign up (free!)</div>
+				</div>
+			</div>
+		</section>
+		
+		<section id = "bottom">
+			<div id = "bottom-bar">
+				<div id = "nav1">
+					<a class = "bottom-gray" id = "ver1" href = "">Discover Pinterest</a>
+					<a class = "bottom-gray" href = "">Gardening</a>
+					<a class = "bottom-gray" href = "">Travel</a>
+					<a class = "bottom-gray" href = "">Kids</a>
+					<a class = "bottom-gray" href = "">Weddings</a>
+					<a class = "bottom-gray" href = "">Humor</a>
+					<a class = "bottom-gray" href = "">Quotes</a>
+					<a class = "bottom-gray" href = "">DIY</a>
+					<a class = "bottom-gray" href = "">Design</a>
+					<a class = "bottom-gray" href = "">Animals</a>
+					<a class = "bottom-gray" href = "">Sitemap</a>
+					<a class = "bottom-gray" href = "">International</a>
+				</div>
+			</div>
+			
+			<div id = "bottom-bar-2">
+				<div id = "nav2">
+					<a class = "bottom-white" href = "">About Pinterest</a>
+					<a class = "bottom-white" href = "">Blog</a>
+					<a class = "bottom-white" href = "">Businesses</a>
+					<a class = "bottom-white" href = "">Terms & Privacy</a>
+					<a class = "bottom-white" href = "">Help</a>
+					<a class = "bottom-white" href = "">iPhone App</a>
+					<a class = "bottom-white" href = "">Android App</a>
+				</div>
+			</div>
+		
+		</section>
+		
+	</body>
+</html>
